@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: single-spa-styleguide
+spec:
+  selector:
+    app: single-spa-styleguide
+  ports:
+    - port: 8080
+      targetPort: 8080

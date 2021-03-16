@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: single-spa-styleguide
+spec:
+  selector:
+    matchLabels:
+      app: single-spa-styleguide
+  template:
+    metadata:
+      labels:
+        app: single-spa-styleguide
+    spec:
+      containers:
+        - name: single-spa-styleguide
+          image: ryanisfluffy/single-spa-styleguide:v0.0.1
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 8080
